@@ -1,0 +1,273 @@
+╔════════════════════════════════════════════════════════════════╗
+║         DRK WEBSITE - QUICK START ANLEITUNG                     ║
+║         Deutsche Rotes Kreuz Oberberg SW                        ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+🚀 NUR 3 SCHRITTE ZUM STARTEN!
+═══════════════════════════════════════════════════════════════════
+
+
+SCHRITT 1️⃣: DATENBANK IMPORTIEREN
+───────────────────────────────────────────────────────────────────
+
+1. Browser öffnen: http://localhost/phpmyadmin
+
+2. Neue Datenbank erstellen:
+   • Linke Seite: "+ Neue Datenbank"
+   • Name: drk_oberberg
+   • Kollation: utf8mb4_unicode_ci
+   • Klick: Erstellen
+
+3. SQL-Datei importieren:
+   • Oben: "Importieren"
+   • Datei: database/drk_oberberg.sql auswählen
+   • Klick: "Ausführen"
+
+✅ Fertig! Datenbank ist bereit.
+
+
+SCHRITT 2️⃣: DATEIEN KOPIEREN
+───────────────────────────────────────────────────────────────────
+
+1. Alle Dateien in XAMPP kopieren:
+   
+   Source: [Projekt-Ordner]/DRK
+   Ziel:   c:\xampp\htdocs\DRK
+   
+   (Oder direkt in htdocs/DRK erstellen)
+
+2. Apache neustarten (falls nötig):
+   • XAMPP Control Panel öffnen
+   • Apache → Stop → Start
+
+
+SCHRITT 3️⃣: WEBSITE AUFRUFEN
+───────────────────────────────────────────────────────────────────
+
+Öffentliche Website:
+  https://localhost/DRK
+
+Admin-Bereich:
+  http://localhost/DRK/src/admin/login.php
+
+Anmeldedaten:
+  Benutzername: admin
+  Passwort:     admin123
+
+
+═══════════════════════════════════════════════════════════════════
+🎉 FERTIG! DIE WEBSITE LÄUFT!
+═══════════════════════════════════════════════════════════════════
+
+
+📋 WAS WIRD ES GEBEN?
+═══════════════════════════════════════════════════════════════════
+
+ÖFFENTLICHE BEREICHE:
+  ✅ Startseite mit aktuellen News & Veranstaltungen
+  ✅ Alle Nachrichten anschauen
+  ✅ Alle Veranstaltungen im Kalender
+  ✅ Kontaktformular
+  ✅ Über uns & Datenschutz Seiten
+  ✅ Responsive Design (Mobile-freundlich)
+
+ADMIN-BEREICH:
+  ✅ Dashboard mit Übersicht
+  ✅ Nachrichten erstellen/bearbeiten/löschen
+  ✅ Veranstaltungen verwalten
+  ✅ Kontaktanfragen lesen
+  ✅ System-Informationen
+
+
+🎯 ERSTE SCHRITTE IM ADMIN
+═══════════════════════════════════════════════════════════════════
+
+1. Login:
+   http://localhost/DRK/src/admin/login.php
+   User: admin
+   PW: admin123
+
+2. Dashboard sehen:
+   - Statistiken
+   - Schnelllinks
+   - System-Info
+
+3. Neue Nachricht erstellen:
+   - Admin → News
+   - "+ Neue Nachricht" 
+   - Titel & Text ausfüllen
+   - "Sofort veröffentlichen" aktivieren
+   - Erstellen
+
+4. Neue Veranstaltung:
+   - Admin → Events
+   - "+ Neue Veranstaltung"
+   - Datum, Uhrzeit, Ort
+   - Beschreibung
+   - Erstellen
+
+5. Kontaktanfragen ansehen:
+   - Admin → Kontakte
+   - Anfragen in der Liste
+   - Click → Details anschauen
+
+
+🛠️ FALLS ES NICHT FUNKTIONIERT
+═══════════════════════════════════════════════════════════════════
+
+❌ "Blank Page" oder "Database Error"?
+   → Überprüfen: Wurde database/drk_oberberg.sql importiert?
+   → phpMyAdmin öffnen und nochmal importieren
+
+❌ "File not found" oder "404"?
+   → Überprüfen: Sind die Dateien in c:\xampp\htdocs\DRK\ ?
+   → Evtl. Apache neustarten
+
+❌ "Unable to connect to MySQL"?
+   → XAMPP Control Panel öffnen
+   → MySQL starten (grüner Button)
+   → Browser neu laden
+
+❌ Login funktioniert nicht?
+   → Datenbank wurde nicht vollständig importiert
+   → phpMyAdmin → drk_oberberg → SQL-Datei erneut importieren
+
+
+📂 DATEIEN & VERZEICHNISSE
+═══════════════════════════════════════════════════════════════════
+
+c:\xampp\htdocs\DRK\
+│
+├─ index.php                    → Hauptseite
+├─ README.md                    → Übersicht
+├─ SETUP.md                     → Detaillierte Doku
+├─ DATEILISTE.md                → Alle Dateien
+├─ PROJEKTBERICHT.txt           → Was wurde gemacht
+│
+├─ database/
+│  └─ drk_oberberg.sql          → Datenbank-Backup
+│
+├─ public/
+│  ├─ css/style.css             → Styles
+│  ├─ js/main.js                → JavaScript
+│  └─ images/                   → Bilder (leer)
+│
+└─ src/
+   ├─ config/                   → Konfiguration
+   ├─ classes/                  → PHP-Klassen
+   ├─ pages/                    → Templates
+   └─ admin/                    → Admin-Panel
+
+
+🔐 SICHERHEIT
+═══════════════════════════════════════════════════════════════════
+
+Wichtig:
+  ⚠️ Admin-Passwort sofort ändern (nach Inbetriebnahme)!
+  ⚠️ In Produktion: andere Datenbankpasswörter verwenden
+  ⚠️ Regelmäßig Datenbank-Backups machen
+
+
+🎨 DESIGN ANPASSEN
+═══════════════════════════════════════════════════════════════════
+
+Farben ändern:
+  • DRK-Rot: bg-red-700 → andere Farben
+  • Alle HTML-Dateien durchsuchen und ersetzen
+  • Oder: CSS in public/css/style.css anpassen
+
+Logo/Bilder:
+  • Speichern in: public/images/
+  • In HTML einfügen:
+    <img src="/DRK/public/images/logo.png" alt="Logo">
+
+Text ändern:
+  • Alle PHP-Dateien editieren
+  • Texte sind direkt in den Dateien
+
+
+📚 DOKUMENTATION
+═══════════════════════════════════════════════════════════════════
+
+README.md            → Projekt-Übersicht (schnell lesen)
+SETUP.md             → Komplette Anleitung (detailliert)
+DATEILISTE.md        → Dateien & Struktur
+PROJEKTBERICHT.txt   → Was wurde alles gemacht
+
+
+💡 TIPPS & TRICKS
+═══════════════════════════════════════════════════════════════════
+
+• Kontakt-Datenbank ansehen:
+  phpMyAdmin → drk_oberberg → contacts
+
+• News direkt in DB ändern:
+  phpMyAdmin → drk_oberberg → news
+
+• Demo-Daten löschen:
+  TRUNCATE news;
+  TRUNCATE events;
+  TRUNCATE contacts;
+
+• Datenbank zurücksetzen:
+  Datenbank löschen & drk_oberberg.sql neu importieren
+
+
+🚀 SKALIEREN & ERWEITERN
+═══════════════════════════════════════════════════════════════════
+
+Newsletter-Funktion hinzufügen?
+  → Neue Tabelle in SQL erstellen
+  → Klasse Newsletter.php erstellen
+  → Admin-Seite hinzufügen
+
+Bildergalerie?
+  → Neue Tabelle galleries
+  → Upload-Logik in PHP
+  → lightbox.js einbinden
+
+Suchfunktion?
+  → SQL FULLTEXT INDEX
+  → Search.php Klasse
+  → Suche-Seite
+
+→ Siehe SETUP.md für Erweiterungsmöglichkeiten
+
+
+✅ CHECKLISTE VOR LIVE-GANG
+═══════════════════════════════════════════════════════════════════
+
+[ ] Admin-Passwort ändern
+[ ] BASE_URL in src/config/config.php anpassen
+[ ] Datenbank-Backup erstellen
+[ ] HTTPS aktivieren
+[ ] error_reporting auf 0 setzen
+[ ] Regelmäßige Backups planen
+[ ] Monitoring einrichten
+
+
+📞 SUPPORT
+═══════════════════════════════════════════════════════════════════
+
+Fehler in der Konsole?
+  → Browser F12 drücken
+  → Console anschauen
+  → Error-Messages lesen
+
+PHP Fehler?
+  → XAMPP logs/ anschauen
+  → oder display_errors in php.ini aktivieren
+
+Fragen?
+  → Alle Dateien sind ausführlich kommentiert
+  → SETUP.md hat ausführliche Erklärungen
+
+
+═══════════════════════════════════════════════════════════════════
+
+🎉 VIEL ERFOLG MIT DER WEBSITE!
+
+Weitere Infos: README.md und SETUP.md lesen
+
+═══════════════════════════════════════════════════════════════════
