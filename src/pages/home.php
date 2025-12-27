@@ -31,7 +31,7 @@ ob_start();
                 Wir sind eine gemeinnützige Hilfsorganisation, die sich seit über 100 Jahren dem Wohl der Menschheit verschrieben hat.
             </p>
             <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                <a href="<?php echo BASE_URL; ?>/pages/uber-uns" class="bg-white text-red-700 px-8 py-3 rounded font-bold hover:bg-gray-100 transition text-center">
+                <a href="<?php echo BASE_URL; ?>/index.php?page=uber-uns" class="bg-white text-red-700 px-8 py-3 rounded font-bold hover:bg-gray-100 transition text-center">
                     Mehr erfahren
                 </a>
                 <a href="<?php echo BASE_URL; ?>/index.php?page=contact" class="border-2 border-white px-8 py-3 rounded font-bold hover:bg-red-600 transition text-center">

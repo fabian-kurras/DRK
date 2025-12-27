@@ -84,6 +84,13 @@ $unreadContacts = $contactObj->countUnread();
             </div>
             
             <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-3xl mb-2">📄</div>
+                <p class="text-gray-600">Seiten</p>
+                <p class="text-4xl font-bold">--</p>
+                <a href="<?php echo BASE_URL; ?>/src/admin/pages.php" class="text-red-700 text-sm hover:underline">Verwalten →</a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="text-3xl mb-2">⚙️</div>
                 <p class="text-gray-600">Verwaltung</p>
                 <p class="text-4xl font-bold">--</p>
@@ -101,6 +108,9 @@ $unreadContacts = $contactObj->countUnread();
                 </a>
                 <a href="<?php echo BASE_URL; ?>/src/admin/events.php?action=new" class="block bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 w-full text-center">
                     + Neue Veranstaltung erstellen
+                </a>
+                <a href="<?php echo BASE_URL; ?>/src/admin/pages.php?action=new" class="block bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800 w-full text-center">
+                    + Neue Seite erstellen
                 </a>
                 <a href="<?php echo BASE_URL; ?>/src/admin/blood_donations.php" class="block bg-yellow-700 text-white px-4 py-2 rounded hover:bg-yellow-800 w-full text-center">
                     🩸 Blutspendetermine verwalten

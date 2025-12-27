@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeEventListeners() {
     // Mobile Menu Toggle (falls implementiert)
-    const menuToggle = document.getElementById('menu-toggle');
+    const menuToggle = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (menuToggle && mobileMenu) {
